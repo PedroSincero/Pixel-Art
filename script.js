@@ -20,11 +20,10 @@ for (let index = 0; index < getColor.length; index += 1) {
   getColor[index].addEventListener('click', clickNasPaletas);
 }
 
-const getPixel = document.getElementsByClassName('pixel');
+let getPixel = document.getElementsByClassName('pixel');
 const selectedColor = document.getElementsByClassName('color');
 
 for (let pixelIndex = 0; pixelIndex < getPixel.length; pixelIndex += 1) {
-
   getPixel[pixelIndex].addEventListener('click', (event) => {
     if (selectedColor[0].classList.contains('selected')) {
       event.target.style.background = 'black';
@@ -39,9 +38,9 @@ for (let pixelIndex = 0; pixelIndex < getPixel.length; pixelIndex += 1) {
 }
 // remover
 
-let getButton = document.getElementById('clear-board');
+const getButton = document.getElementById('clear-board');
 getButton.addEventListener('click', () => {
-  let getPixel = document.getElementsByClassName('pixel');
+  getPixel = document.getElementsByClassName('pixel');
   for (let index = 0; index < getPixel.length; index += 1) {
     getPixel[index].style.backgroundColor = 'white';
   }
