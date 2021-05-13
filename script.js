@@ -45,3 +45,23 @@ getButton.addEventListener('click', () => {
     getPixel[index].style.backgroundColor = 'white';
   }
 });
+
+// adicionar el
+
+let rowsAndCols = 5;
+let pixelBoard = document.getElementById('pixel-board');
+
+function generateBoard() {
+  rowsAndCols = document.getElementById('board-size').value;
+  if (rowsAndCols !== '') {
+    pixelBoard.innerHTML = '';
+    pixelBoard.style.width = (rowsAndCols * 42) + 'px';
+    Quadro();
+  } else {
+    alert('Board inválido!');
+  }
+
+}
+
+let btnVQV = document.getElementById('generate-board');
+btnVQV.addEventListener('click', generateBoard);

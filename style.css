@@ -9,15 +9,13 @@
 .pixel {
     width: 40px;
     height: 40px;
-    background-color: white;
     border: 1px solid black;
-    padding: 5px;  
     box-sizing: border-box;
-    display: inline-block;
 }
 #pixel-board {
-    width: 240px;
-    display: table;
+    width: 200px;
+    display: flex;
+    flex-flow: wrap;
 }
 .black {
     background-color: black;
@@ -30,4 +28,7 @@
 }
 .green {
     background-color: green;    
+}
+#board-size {
+    width: 135px;
 }
